@@ -46,6 +46,12 @@ module.exports = function(grunt) {
           cwd: './bower_components/underscore',
           src: 'underscore*',
           dest: './app/js/vendor'
+        }, {
+          expand: true,
+          nonull: true,
+          cwd: './bower_components/jqueryui',
+          src: 'jquery-ui*',
+          dest: './app/js/vendor'
         }]
       }
     },
@@ -54,7 +60,7 @@ module.exports = function(grunt) {
         options: {
           compress: true,
           modifyVars: {
-            'icon-font-path': '"../fonts/bootstrap/"',
+            //'icon-font-path': '"../fonts/bootstrap/"',
             'border-radius-base': '0',
             'border-radius-large': '0',
             'border-radius-small': '0'
